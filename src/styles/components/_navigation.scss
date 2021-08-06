@@ -1,0 +1,22 @@
+
+.navigation{
+margin:2.6rem 0;
+display:flex;
+
+   a{
+    margin: 1rem;
+    padding: 1rem;
+    position: relative;
+    background-color: $beige;
+    color: black;
+    text-decoration: none;
+    }
+    a:hover{
+        background-color: $beigeActif;
+    }
+
+   .nav-active{
+    background-color: #FFCBA4;
+   }
+
+}
