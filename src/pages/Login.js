@@ -1,10 +1,14 @@
-import Navigation from "../components/Navigation";
+
+import Header from "../components/Header";
+import Log from "../components/Login";
 
 function Login() {
     return (
         <div className ="Login">
-            <Navigation/>
+            <Header/>
+           
             <h1>Login</h1>
+            <Log/>
         </div>
     )
     }

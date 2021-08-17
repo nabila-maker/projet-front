@@ -1,14 +1,13 @@
 
-import Logo from "../components/Logo";
-import Navigation from "../components/Navigation";
+
 import Challenges from "../components/Challenges";
+import Header from "../components/Header";
 
 
 function Challenge() {
 return (
     <div className ="Challenges">
-          <Logo/>
-        <Navigation/>
+          <Header/>
         <Challenges/>
       
 

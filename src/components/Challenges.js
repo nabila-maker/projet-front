@@ -16,7 +16,7 @@ const [data,setData] = useState([]); //data: stock tout nos appel a la donnée o
 
 
    },[]);
-   console.log(data)
+ 
 
     return (
          <div className="challenges">

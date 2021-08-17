@@ -4,7 +4,7 @@ function Navigation() {
     return(
         <div className="navigation">
             <NavLink exact to="/" activeClassName="nav-active">
-                Bienvenue
+                Challenges
             </NavLink>
             <NavLink exact to="/Account" activeClassName="nav-active">
                Account
