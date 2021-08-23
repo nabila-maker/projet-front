@@ -1,66 +1,112 @@
-.card{
-    
-    height:5rem;
-    position: relative;
-    margin:0,1rem;
-    box-shadow: 0 0 2px rgba(51,51,51,0.25);
-    transition:0.3s;
+ .card{
+   
+     height:6rem;
+     width: 80%;
+    border: olivedrab solid 1px;
+     background-color: $beige;
+     text-decoration: none;
+      
+     
+    // position: relative;
+//     margin:0,1rem;
+    //  box-shadow: 0 0 2px rgba(51,51,51,0.25);
+    //  transition:0.3s;
   
-    border-radius: 0,4rem;
+    //  border-radius: 0,4rem;
 
-    &:hover{
-        transform:scale(1.25);
-        z-index:2;
+    //  &:hover{
+    //     transform:scale(1.25);
+    //      z-index:2;
+ }
+    // }
+    
+    .challenges-list{
+        width: 100%;
+        gap: 2rem;
+       display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        align-items: center;
+        text-decoration: none;
+        list-style-type: none;
+
+        ul{
+            padding-bottom: 5%;
+        }
+
+        li{
+            text-align: center;
+            text-decoration: none;
+         font-size: $fs;
+         height:fit-content;
+
+            list-style-type: none;
+            
+
+        }
+        button{
+            width: 100%;
+            height: 15%;
+            background-color: $beigeActif;
+            color: black;
+            border: none;
+            font-size: 1rem;
+            
+        }
     }
 
-    .data-Container{
+
+
+//     .data-Container{
         
-        position:absolute;
-        top: 0;
-        opacity: 0;
-        width: 50%;
-        height: 50%;
-        transition: 0.2s;
-        }
-        &:hover{
-            opacity:1; 
-         ul{
-            transform:scaleY(1);
-         }
-        }
-        ul{
-            background-color: $card;
-            padding-top:5px;
-            display: grid;
-            height: 50%;
-            width: 50%;
-            text-align: center;
-            transition: 0.3s;
-            transform:scaleY(0.3);
-            z-index:20;
+//         position:absolute;
+//         top: 0;
+//         opacity: 0;
+//         width: 50%;
+//         height: 50%;
+//         transition: 0.2s;
+//         }
+//         &:hover{
+//             opacity:1; 
+//          ul{
+//             transform:scaleY(1);
+//          }
+//         }
+//         ul{
+//             background-color: $card;
+//             padding-top:5px;
+//             display: grid;
+//             height: 50%;
+//             width: 50%;
+//             text-align: center;
+//             transition: 0.3s;
+//             transform:scaleY(0.3);
+//             z-index:20;
 
-            &:after{
-                content: "";
-                width: 50%;
-                height: 50%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                transition:0.02s;
-            }
-            &:hover::after{
-                background: rgba(0,0,0,0.65);
-            }
+//             &:after{
+//                 content: "";
+//                 width: 50%;
+//                 height: 50%;
+//                 position: absolute;
+//                 top: 0;
+//                 left: 0;
+//                 transition:0.02s;
+//             }
+//             &:hover::after{
+//                 background: rgba(0,0,0,0.65);
+//             }
 
-        }
-        li{
-            font-size: 0.8rem;
-            z-index:30;
+//         }
+//         li{
+//             font-size: 0.8rem;
+//             z-index:30;
 
         
-        }
+//         }
 
        
     
       
-}
+// }

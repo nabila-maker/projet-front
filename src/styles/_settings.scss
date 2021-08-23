@@ -1,7 +1,51 @@
 
 $vert:#68BA89;
+
 $beigeActif:#FFCBA4;
 $beige:#FFDDC5;
-$card:#FFE4D1;
+$card:hsl(25, 100%, 91%);
 $body:#D0F0C0;
+$fsb: 1.1rem;
+$fs:1rem;
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+     width: 100%;
+    // font-family: $font-1;
+    // color: $color-3;
+    background-color: $body;
+   
+  }
+
+  img{
+      width:25%;
+      position:relative;
+      right:4%;
+  }
+  h1{
+      
+      text-align: center;
+      color: black;
+      position: relative;
+      width: 60%;
+      left: 25%;
+      bottom: 50%;
+      font-size:2.5rem;
+  }
+  a{
+      text-decoration: none;
+  }
+
+h2{
+    text-align:center;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+  

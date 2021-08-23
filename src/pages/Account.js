@@ -1,28 +1,35 @@
 import React from 'react';
-import NavAccount from '../components/NavAccount';
-import Navigation from '../components/Navigation';
-import { NavLink } from "react-router-dom";
-import Header from '../components/Header';
+import {NavLink} from 'react-router-dom';
+import Footer from '../components/Footer';
+
+import Navigation from '../components/Navigation'
+
+import AccChallenges from '../pages/AccChallenges';
 
 
-function Account() {
-    return (
-        
-        
-        <div>
-            <Header/>
-            <div className="nav">
-            <NavLink exact to="/SelectChallenge" activeClassName="nav-active">
-               your challenges
-            </NavLink>
-            <NavLink exact to="/ValidatedChallenge" activeClassName="nav-active">
-               validated challenges
-            </NavLink>
-           
-        </div>
+
+
+  function Account() {
       
-           
-        </div>
+
+    
+     
+
+    return (
+        <>
+        
+         <Navigation/>
+         
+                <NavLink exact to="/account/ChallengesValidated" activeClassName="nav-active">
+               Validated Challenges 
+             </NavLink>
+         <AccChallenges/> 
+
+      
+
+         <Footer/> 
+
+        </>
         
     );
 };

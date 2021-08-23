@@ -1,14 +1,15 @@
-import React,{useState} from 'react';
+import React,{useState,useContext} from 'react';
 import {Link,useHistory} from 'react-router-dom';
 import M from "materialize-css";
 import api from '../services/Api';
-
+import {UserContext} from '../App'
 
 
 
 function Log() {
 
-    
+    const{state,dispatch}=useContext(UserContext)
+
     const [username, setUsername] = useState()
     
     const [password, setPassword] = useState()
@@ -21,15 +22,20 @@ const user = {username,password}
       e.preventDefault();
    
    try {
+       
    const {data} = await api.post("/user/login",user)
+   console.log(data)
    localStorage.setItem("token",data.token)
-   localStorage.setItem("user",data.user.id)
+   const userInfo = data.user
+   console.log(userInfo)
+   localStorage.setItem("user",userInfo.id)  //Json.stringify
+   dispatch({type:"USER",payload:data.user})
     history.push("/")
-console.log(data)
+
 
     
   } catch (err) {
-    console.log(err.response.data);
+    console.log(err);
     M.toast({
         html: "Ce user n'existe pas",
         classes: "#c62828 red darken-3",
@@ -43,19 +49,19 @@ console.log(data)
     return (
         <>
 
-        <form>
+        <form className='formLog'>
          
 
             <div className="form">
             <label htmlFor="username">Username*:</label>
-            <input type="text" className="form-control" placeholder="Enter username" name="username" onChange={(e)=>setUsername(e.target.value)} required/>     
+            <input type="text" className="form-cont" placeholder="Enter username" name="username" onChange={(e)=>setUsername(e.target.value)} required/>     
 
         </div>
 
 
         <div className="form">
             <label htmlFor="password">password*:</label>
-            <input type="password" className="form-control" placeholder="Enter password" name="password" onChange={(e)=>setPassword(e.target.value)} required/>  
+            <input type="password" className="form-cont" placeholder="Enter password" name="password" onChange={(e)=>setPassword(e.target.value)} required/>  
             
         </div>
             
@@ -64,7 +70,7 @@ console.log(data)
         </form>
 
         <div>
-          <Link className="simpleLink" to="/signup">Pas encore inscrit? Vouz pouvez le faire ici</Link> 
+          <Link className="simpleLink" to="/signup">Pas encore inscrit? Vous pouvez le faire ici</Link> 
     </div>
     
      </>

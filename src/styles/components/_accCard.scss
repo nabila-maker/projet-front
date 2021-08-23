@@ -1,0 +1,79 @@
+.data-containerr{
+   
+    height:6rem;
+    width: 80%;
+    border: 4px solid black;
+    background-color: $beige;
+    text-decoration: none;
+
+    .accChallenges{
+        width: 100%;
+        gap: 2rem;
+       display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        align-items: center;
+        text-decoration: none;
+        list-style-type: none;
+
+        .accChallenges-list{
+            padding-bottom: 5%;
+        }
+
+        .accCard{
+            text-align: center;
+            text-decoration: none;
+         font-size: $fs;
+         height:fit-content;
+
+            list-style-type: none;
+            
+
+        }
+        button{
+            width: 100%;
+            height: 15%;
+            background-color: $beigeActif;
+            color: black;
+            border: none;
+            font-size: 1rem;
+            
+        }
+    }
+
+     
+    
+   // position: relative;
+//     margin:0,1rem;
+   //  box-shadow: 0 0 2px rgba(51,51,51,0.25);
+   //  transition:0.3s;
+ 
+   //  border-radius: 0,4rem;
+
+   //  &:hover{
+   //     transform:scale(1.25);
+   //      z-index:2;
+}
+   // }
+//    .challenges-list{
+//        width: 100%;
+//        gap: 2rem;
+//       display: flex;
+//        flex-wrap: wrap;
+//        flex-direction: column;
+//        padding-top: 2rem;
+//        align-items: center;
+//        text-decoration: none;
+//        list-style-type: none;
+
+       .accCard{
+           text-align: center;
+           text-decoration: none;
+        
+           list-style-type: none;
+           
+
+       }
+//    }

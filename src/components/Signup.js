@@ -16,30 +16,26 @@ function Signup() {
    const history = useHistory();
    
 const user = {username, email, password}
-
-  const submit = async (e)=> {
+const submit = async (e)=> {
       
-      e.preventDefault();
-   
-   try {
-    await api.post("/user/signup",user)
-    history.push("/login")
-    toast.error("cet utilisateur a bien été créér",{position: toast.POSITION.TOP_CENTER});
+    e.preventDefault();
+ 
+ try {
+  await api.post("/user/signup",user)
+  history.push("/login")
+  toast.error("cet utilisateur a bien été créér",{position: toast.POSITION.TOP_CENTER});
 
-    
-  } catch (err) {
-    console.log(err.response.data);
-    toast.warn("cet utilisateur existe déjà",{position: toast.POSITION.TOP_CENTER});
-  }
   
-      
-
-  }
+} catch (err) {
+  console.log(err.response.data);
+  toast.warn("cet utilisateur existe déjà",{position: toast.POSITION.TOP_CENTER});
+}
+}
 
     return (
         <>
 
-        <form>
+        <form className="formSign">
             
 
             <div className="form">
